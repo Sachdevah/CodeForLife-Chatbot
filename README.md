@@ -29,4 +29,6 @@ finally to run the flask project, run chat.py file
 $ (venv) python chat.py
 
 Image of the interface:
+
+
 <img width="425" alt="Screenshot 2022-05-19 at 11 38 01" src="https://user-images.githubusercontent.com/70515316/169274693-daa06fc4-57c6-4c94-bfac-f1a057ca92a9.png">
