@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!--imported google font as per code-for-life needs-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <title>Ocado-Code for Life (Chatbot)</title>
+</head>
+<body >
+
+    
+<div class="container">
+    <div class="chatbox">
+        <div id= "chatbox_id" class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="{{ url_for('static', filename='images/chatbot.png') }}" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Chat support</h4>
+                    
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn"><img src="{{ url_for('static', filename='images/menu.png') }}" alt="image"></button>
+                    <div class="dropdown-content">
+                      <a class="Font_Button">Change Font Size</a>
+                      <a class="Theme_Button">Change Theme</a>
+                      <a class="Email_button">Send us an email</a>
+                      <a class="ProvideFeedback">provide us a feedback</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="chatbox__messages">
+                <div>
+                    <div id="chat_id" class="messages__item messages__item--visitor">
+                        <p>
+                            Hi, My name is Chatty! I'm your virtual assistant, you can ask me questions like:
+                            <br>what is if/else?
+                            <br>
+                            <br>how can i set up 2-factor authentication?
+                            <br>
+                            <br>how to recover my password?
+                            <br>
+                            <br>hints related to rapid router?
+                            <br>
+                            <br>hints related to krono?
+                            <br>
+                            <br>coding concepts used in the games?
+                            <br>
+                            <br>Apart from these questions, I can also share some jokes...XD
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button><img src="{{ url_for('static', filename='images/chatbox.png') }}" /></button>
+        </div>
+    </div>
+</div>
+
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson}};
+        //$SCRIPT_ROOT = '{{ request.script_root|tojson|safe }}'; 
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
